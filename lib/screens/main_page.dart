@@ -32,32 +32,43 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage("assets/arrow.png"),
+              // color: Colors.black,
             ),
-            title: Text('Home'),
-            backgroundColor: Colors.green,
+            title: Text(''),
+            backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
               icon: ImageIcon(
                 AssetImage("assets/sent.png"),
+                // color: Colors.black,
               ),
-              title: Text('Collection'),
-              backgroundColor: Colors.green),
+              title: Text(''),
+              backgroundColor: Colors.white),
           BottomNavigationBarItem(
               icon: ImageIcon(
                 AssetImage("assets/men.png"),
+                // color: Colors.black,
               ),
-              title: Text('Profile'),
-              backgroundColor: Colors.green),
+              title: Text(''),
+              backgroundColor: Colors.white),
           BottomNavigationBarItem(
               icon: ImageIcon(
                 AssetImage("assets/setting.png"),
+                // color: Colors.black,
               ),
-              title: Text('Settings'),
-              backgroundColor: Colors.green),
+              title: Text(
+                '',
+              ),
+              backgroundColor: Colors.white),
         ],
         type: BottomNavigationBarType.shifting,
         currentIndex: _selectedIndex,
+        unselectedIconTheme: IconThemeData(color: Colors.black54),
+        // backgroundColor: ,
         selectedItemColor: Color(0xffFF00C7),
+
+        showSelectedLabels: false,
+
         iconSize: 40,
         onTap: (index) => setState(() {
           _selectedIndex = index;
