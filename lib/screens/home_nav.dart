@@ -66,8 +66,7 @@ class HomeNavigation extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (c) => ChattingPage()));
+              
                 },
                 child: Container(
                   height: 50,

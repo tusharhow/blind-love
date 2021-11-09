@@ -63,9 +63,9 @@ class _MainPageState extends State<MainPage> {
         ],
         type: BottomNavigationBarType.shifting,
         currentIndex: _selectedIndex,
-        unselectedIconTheme: IconThemeData(color: Colors.black54),
+        unselectedIconTheme: const IconThemeData(color: Colors.black54),
         // backgroundColor: ,
-        selectedItemColor: Color(0xffFF00C7),
+        selectedItemColor: const Color(0xffFF00C7),
 
         showSelectedLabels: false,
 
