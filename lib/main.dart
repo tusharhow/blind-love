@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:animation_wrappers/animations/faded_slide_animation.dart';
 import 'package:blind_love/screens/welcome_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,10 +35,10 @@ class _SplashScreen1State extends State<SplashScreenFirst> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      // Navigator.pushAndRemoveUntil(
-      //     context,
-      //     MaterialPageRoute(builder: (c) => const WelcomePage()),
-      //     (route) => false);
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (c) => const WelcomePage()),
+          (route) => false);
     });
   }
 

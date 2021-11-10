@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
-import 'package:intl/intl.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -9,7 +7,6 @@ class SettingsPage extends StatefulWidget {
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
-final TextEditingController _dobController = TextEditingController();
 bool isSwitched = false;
 
 class _SettingsPageState extends State<SettingsPage> {

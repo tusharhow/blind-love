@@ -1,3 +1,4 @@
+import 'package:blind_love/screens/my_avatar_male.dart';
 import 'package:flutter/material.dart';
 
 class QuizPage extends StatelessWidget {
@@ -196,6 +197,23 @@ class QuizPage extends StatelessWidget {
                                       ),
                                     ),
                                   ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  SizedBox(
+                                    width: 90,
+                                    height: 40,
+                                    child: ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.pushAndRemoveUntil(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (c) =>
+                                                      const AvatarMale()),
+                                              (route) => false);
+                                        },
+                                        child: Text('Next')),
+                                  )
                                 ],
                               ),
                             )),
