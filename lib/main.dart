@@ -36,22 +36,31 @@ class _SplashScreen1State extends State<SplashScreenFirst> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(builder: (c) => const WelcomePage()),
-          (route) => false);
+      // Navigator.pushAndRemoveUntil(
+      //     context,
+      //     MaterialPageRoute(builder: (c) => const WelcomePage()),
+      //     (route) => false);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      constraints: const BoxConstraints.expand(),
-      padding: const EdgeInsets.only(top: 0.0),
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/bg.png'), fit: BoxFit.cover)),
+        body: Stack(
+      fit: StackFit.expand,
+      children: [
+        Container(
+          alignment: Alignment.center,
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/bgf.png'),
+              fit: BoxFit.fill,
+            ),
+          ),
+        ),
+      ],
     ));
   }
 }

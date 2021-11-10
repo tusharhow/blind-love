@@ -1,4 +1,5 @@
 import 'package:blind_love/screens/auth/login.dart';
+import 'package:blind_love/screens/quiz_page.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -170,7 +171,7 @@ class SignUpPage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (c) => const LoginPage()),
+                      MaterialPageRoute(builder: (c) => const QuizPage()),
                     );
                   },
                   child: Container(

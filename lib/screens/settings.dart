@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
+import 'package:intl/intl.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -6,6 +8,9 @@ class SettingsPage extends StatefulWidget {
   @override
   State<SettingsPage> createState() => _SettingsPageState();
 }
+
+final TextEditingController _dobController = TextEditingController();
+bool isSwitched = false;
 
 class _SettingsPageState extends State<SettingsPage> {
   @override
@@ -118,8 +123,146 @@ class _SettingsPageState extends State<SettingsPage> {
                 ),
               ),
               SizedBox(
-                height: 50,
+                height: 60,
               ),
+              Container(
+                  alignment: Alignment.bottomLeft,
+                  child: Text('Birth Date',
+                      style: TextStyle(fontSize: 12, color: Colors.black54))),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      Text('21', style: TextStyle(fontSize: 15)),
+                      Container(
+                        alignment: Alignment.bottomLeft,
+                        color: Colors.black,
+                        height: 3,
+                        width: 73,
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text('October', style: TextStyle(fontSize: 15)),
+                      Container(
+                        alignment: Alignment.bottomLeft,
+                        color: Colors.black,
+                        height: 3,
+                        width: 73,
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text('2000', style: TextStyle(fontSize: 15)),
+                      Container(
+                        alignment: Alignment.bottomLeft,
+                        color: Colors.black,
+                        height: 3,
+                        width: 73,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Container(
+                  alignment: Alignment.bottomLeft,
+                  child: Text('Preferences',
+                      style: TextStyle(fontSize: 12, color: Colors.black54))),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Image.asset('assets/moon.png'),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    'Dark Mode',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  Spacer(),
+                  Switch(
+                    value: isSwitched,
+                    onChanged: (value) {
+                      setState(() {
+                        isSwitched = value;
+                        print(isSwitched);
+                      });
+                    },
+                    activeTrackColor: Colors.lightGreenAccent,
+                    activeColor: Colors.green,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  Image.asset('assets/lang2.png'),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    'Language',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  Spacer(),
+                  Text('English',
+                      style: TextStyle(fontSize: 13, color: Colors.black45))
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Image.asset('assets/loca.png'),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    'Location',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  Spacer(),
+                  Text('France',
+                      style: TextStyle(fontSize: 13, color: Colors.black45))
+                ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                children: [
+                  Image.asset('assets/logout.png'),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    'Log Out',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),

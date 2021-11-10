@@ -9,6 +9,47 @@ class ChattingPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Image.asset('assets/back.png'),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              children: [
+              
+                const CircleAvatar(
+                  backgroundImage: AssetImage('assets/girl.png'),
+                ),
+                const SizedBox(
+                  width: 15,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Nikita',
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black)),
+                    Text('Online 30 mins ago',
+                        style: TextStyle(
+                          color: Colors.black54,
+                          fontSize: 13,
+                        )),
+                  ],
+                ),
+                SizedBox(
+                  width: 70,
+                ),
+                Image.asset('assets/lang.png'),
+              ],
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -16,44 +57,8 @@ class ChattingPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                Row(
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Image.asset('assets/back.png'),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    const CircleAvatar(
-                      backgroundImage: AssetImage('assets/girl.png'),
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Nikita',
-                            style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold)),
-                        Text('Online 30 mins ago',
-                            style: TextStyle(
-                              color: Colors.black54,
-                              fontSize: 13,
-                            )),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 70,
-                    ),
-                    Image.asset('assets/lang.png'),
-                  ],
-                ),
                 SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,

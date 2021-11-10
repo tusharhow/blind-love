@@ -28,11 +28,13 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
     animation_wrappers: ^3.0.0
-   
+
     cupertino_icons: ^1.0.2
     flutter:
         sdk: flutter
     flutter_svg: ^0.23.0+1
+    intl: ^0.17.0
+    flutter_holo_date_picker: ^1.0.1+2
 
 dev_dependencies:
     flutter_test:

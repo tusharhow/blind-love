@@ -64,44 +64,45 @@ class HomeNavigation extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              InkWell(
-                onTap: () {
-              
-                },
-                child: Container(
-                  height: 50,
-                  width: MediaQuery.of(context).size.width / 2,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    gradient: LinearGradient(
-                      colors: [
-                        const Color(0xffFF000F).withOpacity(0.40),
-                        const Color(0xffFF00C7),
-                      ],
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
+              Row(
+                children: [
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      height: 50,
+                      width: MediaQuery.of(context).size.width / 2,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        gradient: LinearGradient(
+                          colors: [
+                            const Color(0xffFF000F).withOpacity(0.40),
+                            const Color(0xffFF00C7),
+                          ],
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomLeft,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Row(
+                          children: [
+                            Image.asset('assets/mess.png'),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            const Text(
+                              'Chat Now',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Row(
-                      children: [
-                        Image.asset('assets/mess.png'),
-                        const SizedBox(
-                          width: 20,
-                        ),
-                        const Text(
-                          'Chat Now',
-                          style: TextStyle(color: Colors.white, fontSize: 18),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                alignment: Alignment.bottomRight,
-                child: Image.asset('assets/audio.png'),
+                  Spacer(),
+                  Image.asset('assets/audio.png'),
+                ],
               ),
             ],
           ),
