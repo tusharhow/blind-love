@@ -104,6 +104,9 @@ class HomeNavigation extends StatelessWidget {
                   Image.asset('assets/audio.png'),
                 ],
               ),
+              const SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),

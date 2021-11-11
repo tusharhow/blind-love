@@ -20,7 +20,9 @@ class NotificationsPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
             child: Column(
               children: [
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 InkWell(
                   onTap: () {
                     Navigator.push(
@@ -43,7 +45,7 @@ class NotificationsPage extends StatelessWidget {
                             children: [
                               Text('Nikita',
                                   style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 20,
                                   )),
                               const SizedBox(
                                 width: 8,
@@ -63,7 +65,7 @@ class NotificationsPage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: 60,
+                        width: 70,
                       ),
                       Text('2 min',
                           style: TextStyle(
@@ -98,7 +100,7 @@ class NotificationsPage extends StatelessWidget {
                             children: [
                               Text('Tushar',
                                   style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 20,
                                   )),
                               const SizedBox(
                                 width: 8,
@@ -153,7 +155,7 @@ class NotificationsPage extends StatelessWidget {
                             children: [
                               Text('Darlene',
                                   style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 20,
                                   )),
                               const SizedBox(
                                 width: 8,
@@ -173,7 +175,7 @@ class NotificationsPage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: 60,
+                        width: 55,
                       ),
                       Text('4 min',
                           style: TextStyle(

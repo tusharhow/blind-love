@@ -43,9 +43,7 @@ class ChatList extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Nikita',
-                              style: TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold)),
+                          Text('Nikita', style: TextStyle(fontSize: 16)),
                           Text('Sure!',
                               style: TextStyle(
                                 color: Colors.black54,
@@ -54,7 +52,7 @@ class ChatList extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: 110,
+                        width: 120,
                       ),
                       Container(
                         height: 20,
@@ -111,9 +109,7 @@ class ChatList extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Tushar',
-                              style: TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold)),
+                          Text('Tushar', style: TextStyle(fontSize: 16)),
                           Text('Sure not!',
                               style: TextStyle(
                                 color: Colors.black54,
@@ -179,9 +175,7 @@ class ChatList extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Tushar',
-                              style: TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold)),
+                          Text('Tushar', style: TextStyle(fontSize: 16)),
                           Text('Typing..',
                               style: TextStyle(
                                 color: Colors.black54,
@@ -190,7 +184,7 @@ class ChatList extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: 110,
+                        width: 120,
                       ),
                       Container(
                         height: 20,

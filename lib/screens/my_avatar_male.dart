@@ -150,6 +150,52 @@ class AvatarMale extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(
+                height: 40,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    height: 145,
+                    width: 145,
+                    decoration: BoxDecoration(
+                      color: Color(0xffF2F2F2),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/mat.png'),
+                          Text('Sam',
+                              style: TextStyle(
+                                fontSize: 18,
+                              )),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 145,
+                    width: 145,
+                    decoration: BoxDecoration(
+                      color: Color(0xffF2F2F2),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/raj.png'),
+                          Text('Rajesh',
+                              style: TextStyle(
+                                fontSize: 18,
+                              )),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

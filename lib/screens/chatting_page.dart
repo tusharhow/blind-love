@@ -20,32 +20,36 @@ class ChattingPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Row(
               children: [
-              
                 const CircleAvatar(
                   backgroundImage: AssetImage('assets/girl.png'),
                 ),
                 const SizedBox(
                   width: 15,
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Nikita',
-                        style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black)),
-                    Text('Online 30 mins ago',
-                        style: TextStyle(
-                          color: Colors.black54,
-                          fontSize: 13,
-                        )),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Nikita',
+                        style: TextStyle(fontSize: 19, color: Colors.black),
+                      ),
+                      Text('Online 30 mins ago',
+                          style: TextStyle(
+                            color: Colors.black54,
+                            fontSize: 12,
+                          )),
+                    ],
+                  ),
                 ),
                 SizedBox(
-                  width: 70,
+                  width: 100,
                 ),
-                Image.asset('assets/lang.png'),
+                Image.asset(
+                  'assets/lang.png',
+                  height: 35,
+                ),
               ],
             ),
           ),
