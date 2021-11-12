@@ -167,38 +167,39 @@ class ChattingPage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 80,
+                  height: 140,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [Image.asset('assets/audio.png')],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: 55,
+                      width: MediaQuery.of(context).size.width / 1.50,
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                              borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 0.0,
+                                style: BorderStyle.none,
+                              )),
+                          hintText: 'Send Messages',
+                          hintStyle:
+                              TextStyle(fontSize: 18, color: Colors.black38),
+                          fillColor: Colors.white,
+                          filled: true,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Image.asset('assets/audio.png')
+                  ],
                 ),
                 SizedBox(
                   height: 20,
-                ),
-                Container(
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      hintText: 'Send Messages',
-                      hintStyle: TextStyle(fontSize: 18, color: Colors.black38),
-                      fillColor: Colors.white,
-                      filled: true,
-                      border: InputBorder.none,
-                    ),
-                  ),
-                  decoration: BoxDecoration(
-                    // borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 25,
-                        offset: const Offset(0, 10),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 40,
                 ),
               ],
             ),
