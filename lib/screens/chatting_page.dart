@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ChattingPage extends StatelessWidget {
+class ChattingPage extends StatefulWidget {
   const ChattingPage({Key? key}) : super(key: key);
 
+  @override
+  State<ChattingPage> createState() => _ChattingPageState();
+}
+
+TextEditingController _messageController = new TextEditingController();
+
+class _ChattingPageState extends State<ChattingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -176,6 +183,7 @@ class ChattingPage extends StatelessWidget {
                       height: 55,
                       width: MediaQuery.of(context).size.width / 1.50,
                       child: TextFormField(
+                        controller: _messageController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30.0),
@@ -195,7 +203,12 @@ class ChattingPage extends StatelessWidget {
                     SizedBox(
                       width: 20,
                     ),
-                    Image.asset('assets/audio.png')
+                    _messageController.text.isNotEmpty
+                        ? IconButton(
+                            icon: Icon(Icons.send),
+                            onPressed: () {},
+                          )
+                        : Image.asset('assets/audio.png'),
                   ],
                 ),
                 SizedBox(
