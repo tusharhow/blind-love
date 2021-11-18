@@ -226,7 +226,11 @@ class _ChattingPageState extends State<ChattingPage> {
                     ),
                     writing
                         ? IconButton(
-                            icon: Icon(Icons.send),
+                            icon: Icon(
+                              Icons.send,
+                              color: Colors.pink,
+                              size: 30,
+                            ),
                             onPressed: () {},
                           )
                         : Image.asset('assets/audio.png'),
