@@ -8,8 +8,20 @@ class ChattingPage extends StatefulWidget {
 }
 
 TextEditingController _messageController = new TextEditingController();
+bool writing = false;
 
 class _ChattingPageState extends State<ChattingPage> {
+  sentMessage() {
+    setState(() {
+      _messageController.text.isNotEmpty
+          ? IconButton(
+              icon: Icon(Icons.send),
+              onPressed: () {},
+            )
+          : Image.asset('assets/audio.png');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -198,12 +210,21 @@ class _ChattingPageState extends State<ChattingPage> {
                           fillColor: Colors.white,
                           filled: true,
                         ),
+                        onChanged: (val) {
+                          (val.length > 0 && val.trim() != "")
+                              ? setState(() {
+                                  writing = true;
+                                })
+                              : setState(() {
+                                  writing = false;
+                                });
+                        },
                       ),
                     ),
                     SizedBox(
                       width: 20,
                     ),
-                    _messageController.text.isNotEmpty
+                    writing
                         ? IconButton(
                             icon: Icon(Icons.send),
                             onPressed: () {},
